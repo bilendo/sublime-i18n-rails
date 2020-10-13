@@ -1,0 +1,4 @@
+{
+    "locales_path": "config/locales",
+    "languages": ["de", "en", "it"]
+}
