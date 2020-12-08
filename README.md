@@ -7,9 +7,10 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 git clone git@github.com:bilendo/sublime-i18n-rails.git i18n-rails
 ```
 
+### Contribution
 ```bash
 # if you want to contribute to the project,
-# creating a symlink to a different directory is helpful
+# creating a symlink to a directory of your choice might be helpful
 ln -s ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/i18n-rails ~/Documents/my-projects/i18n-rails
 ```
 
