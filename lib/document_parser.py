@@ -1,8 +1,6 @@
 import sublime
 import re
 
-from .logger import Logger
-
 class DocumentParser:
     def __init__(self, view, point, project_dir, scope_handler):
         self.view        = view
