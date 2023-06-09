@@ -8,7 +8,7 @@ class ScopeHandler:
 
 
     def valid_scope(self):
-        valid_scopes   = ['text.html.ruby', 'source.ruby']
+        valid_scopes = ['source.ruby', 'text.html.rails', 'source.js.rails']
 
         if self.hover_zone == sublime.HOVER_TEXT:
             filtered_scopes = [scope for scope in valid_scopes if scope in self.current_scopes]

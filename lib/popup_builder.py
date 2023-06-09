@@ -34,5 +34,5 @@ class PopupBuilder:
             flags      = sublime.HIDE_ON_MOUSE_MOVE_AWAY,
             location   = self.point,
             max_width  = 700,
-            max_height = 100
+            max_height = 400
         )

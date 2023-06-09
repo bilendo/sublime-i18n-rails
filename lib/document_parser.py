@@ -1,6 +1,8 @@
 import sublime
 import re
 
+from .logger import Logger
+
 class DocumentParser:
     def __init__(self, view, point, project_dir, scope_handler):
         self.view        = view
@@ -41,7 +43,7 @@ class DocumentParser:
 
 
     def find_pattern(self):
-        if ('text.html.ruby' in self.scopes):
-            return re.compile(r't\(["\']+(?P<key>[a-z._]+)["\']+\)')
+        if any(scope in self.scopes for scope in ['text.html.rails', 'source.js.rails']):
+            return re.compile(r't\([\"\']+(?P<key>[a-zA-Z\._]+)[\"\']?.+[\)\,\r\n\r\n]')
         elif ('source.ruby' in self.scopes):
-            return re.compile(r'I18n\.t\(("|\')(?P<key>[a-zA-Z\._]*)("|\')\)')
+            return re.compile(r'I18n\.t\([\"\']+(?P<key>[a-zA-Z\._]+)[\"\']?.+[\)\,\r\n\r\n]')
